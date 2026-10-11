@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Showdown</title>
+
+  <style>
+    body {
+      background: #10182b;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 25px 12px;
+    }
+
+    .box {
+      background: #202d47;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 350px;
+      margin: 30px auto;
+    }
+
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: #58d6ff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>⚡ ULTRA SHOWDOWN</h1>
+  <p>Masuki dunia pertarungan Ultra!</p>
+
+  <div class="box">
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password"
+      placeholder="Password">
+
+    <button onclick="login()">Masuk</button>
+
+    <p id="hasil"></p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "" || pass === "") {
+        document.getElementById("hasil").textContent =
+          "Isi username dan password dulu!";
+      } else {
+        document.getElementById("hasil").textContent =
+          "Halo, " + user + "! Tampilan login berhasil dicoba.";
+      }
+    }
+  </script>
+</body>
+</html>
